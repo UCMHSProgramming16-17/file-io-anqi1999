@@ -4,6 +4,7 @@ import requests
 # set up api that finds the isbn of a particular book
 
 # set up api that takes the isbn and returns information
+# https://openlibrary.org/dev/docs/api/books
 url = 'https://openlibrary.org/api/books?'
 isbn = input("ISBN: ")
 p = {'bibkeys':'ISBN:'+isbn, 'format':'json', 'jscmd':'data'}
