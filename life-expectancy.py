@@ -36,12 +36,12 @@ life_expectancy = 'blah'
 def years(remaining):
     global life_expectancy
     
-    rem = float(remaining)
-    year = math.floor(rem)        # number of full years
-    m = (rem - year) * 12
+    rem = float(remaining)       # convert 'remaining' to a float
+    year = math.floor(rem)       # number of full years
+    m = (rem - year) * 12       # decimal, in terms of months left over
     month = math.floor(m)       # number of full months
-    d = (m - month) * 30
-    day = math.floor(d)         # number of full days
+    d = (m - month) * 30       # decimal, in terms of days left over
+    day = math.floor(d)       # number of full days
     
     life_expectancy = str(year) + ' years, ' + str(month) + ' months, ' + str(day) + ' days'
 
@@ -75,9 +75,7 @@ w.writerow(['age', 'sex', 'life remaining'])
 for a in age:
     for s in sex:
         api() # call api function for remaining life expectancy
-        
         years(remaining)        # call years converter function
-        
         w.writerow([a, s, life_expectancy])     # write 'age', 'sex', and 'remaining life expectancy' to the file
             
 # close file
