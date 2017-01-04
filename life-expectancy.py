@@ -40,9 +40,9 @@ def years(remaining):
     
     rem = float(remaining)       # convert 'remaining' to a float
     year = math.floor(rem)       # number of full years
-    m = (rem - year) * 12       # decimal, in terms of months left over
+    m = (rem - year) * 12       # months left over
     month = math.floor(m)       # number of full months
-    d = (m - month) * 30       # decimal, in terms of days left over
+    d = (m - month) * 30.4375       # days left over (30.4375 is the average number of days per month)
     day = math.floor(d)       # number of full days
     
     life_expectancy = str(year) + ' years, ' + str(month) + ' months, ' + str(day) + ' days'
