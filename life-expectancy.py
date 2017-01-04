@@ -16,7 +16,9 @@ c_available = c_list['countries']
 
 country = input('Country? Preferably its official name, and in proper English. ')      # get user's input
 if country not in c_available:
-    country = input('Sorry, your country is not in the list of available countries. :/ Either you misspelled, did not capitalize properly, forgot the official name of your country, or you live in a smaller country. Try again. ')
+    for each in c_available:
+        print(each)
+    country = input('Sorry, what you typed is invalid. :/ Here is a list of the available countries, with, hopefully, the correct version of your country on there. Either you misspelled, did not capitalize properly, forgot the official name of your country, or you live in a smaller country. Try again. ')
 
 # age
 age = []
